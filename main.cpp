@@ -1,20 +1,17 @@
 #include <iostream>
+#include <string>
 
 int main() {
 
-   int num1 = 8;
-   int num2 = 2;
-   int soma, subtracao, multiplicacao, divisao;
+   int idade = 22;
+   float altura = 1.79;
+   std::string nome = "Diego";
 
-   soma = num1 + num2;
-   subtracao = num1 - num2;
-   multiplicacao = num1 * num2;
-   divisao = num1 / num2;
+   std::cout << "Meu nome e "<<nome<< ", e o seu ?."<< std::endl;
+   std::cout << "Tenho "<<idade<< " anos."<< std::endl;
+   std::cout << "Minha altura e "<<altura<< " metros."<< std::endl;
 
-   std::cout << " 8+2= " << soma << std::endl;
-   std::cout << " 8-2= " << subtracao << std::endl;
-   std::cout << " 8*2= " << multiplicacao << std::endl;
-   std::cout << " 8/2= " << divisao << std::endl;
+
 
     return 0;
 }
