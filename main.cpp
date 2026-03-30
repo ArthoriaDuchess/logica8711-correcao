@@ -1,21 +1,23 @@
 #include <iostream>
-#include <string>
 
 int main() {
 
-   std::string name;
-   int age;
-   float height;
+  int a;
+  int b;
+  // int a, b;
 
+    std::cout << "digite um valor para a: "<<std::endl;
+    std::cin >> a;
 
-   std::cout<< "Seu nome: "<<std::endl;
-   std::cin>>name;
-   std::cout<< "Sua idade: "<<std::endl;
-   std::cin>>age;
-   std::cout<< "Sua altura: "<<std::endl;
-   std::cin>>height;
+    std::cout << "digite um valor para b: "<<std::endl;
+    std::cin >> b;
 
-   std::cout<<" Hello!, Welcome "<<name<<", como voce esta?"<<std::endl;
+    std::cout << (a > b) << " o valor é maior "<< std::endl;
+    std::cout << (a >= b) << " o valor é maior ou igual "<< std::endl;
+    std::cout << (a < b) << " o valor é menor "<< std::endl;
+    std::cout << (a <= b) << " o valor é menor ou igual "<< std::endl;
+    std::cout << (a == b) << " os valores são iguais "<< std::endl;
+    std::cout << (a != b) << " os valores são diferentes "<< std::endl;
 
 
     return 0;
