@@ -19,6 +19,8 @@ int main() {
     std::cout << (a == b) << " os valores são iguais "<< std::endl;
     std::cout << (a != b) << " os valores são diferentes "<< std::endl;
 
+    // > maior, >= maior ou igual, < menor, <= menor ou igual, == igual, != diferente.
 
+    
     return 0;
 }
