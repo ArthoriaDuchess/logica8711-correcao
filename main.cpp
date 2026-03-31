@@ -1,26 +1,12 @@
 #include <iostream>
 
-int main() {
+int main(){
 
-  int a;
-  int b;
-  // int a, b;
+    int a = 8;
+    int b = 3;
 
-    std::cout << "digite um valor para a: "<<std::endl;
-    std::cin >> a;
+    std::cout <<(a % b)<< std::endl;
 
-    std::cout << "digite um valor para b: "<<std::endl;
-    std::cin >> b;
 
-    std::cout << (a > b) << " o valor é maior "<< std::endl;
-    std::cout << (a >= b) << " o valor é maior ou igual "<< std::endl;
-    std::cout << (a < b) << " o valor é menor "<< std::endl;
-    std::cout << (a <= b) << " o valor é menor ou igual "<< std::endl;
-    std::cout << (a == b) << " os valores são iguais "<< std::endl;
-    std::cout << (a != b) << " os valores são diferentes "<< std::endl;
-
-    // > maior, >= maior ou igual, < menor, <= menor ou igual, == igual, != diferente.
-
-    
     return 0;
 }
