@@ -2,12 +2,9 @@
 
 int main(){
 
-    bool isFalse = false;
-    bool isTrue = true;
+    char latter = 'E';
 
-
-    std::cout<<isFalse<<std::endl;
-    std::cout<<isTrue<<std::endl;
+    std::cout<< "the latter is: "<<latter<<std::endl;
 
 
     return 0;
