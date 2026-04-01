@@ -2,10 +2,12 @@
 
 int main(){
 
-    int a = 10;
-    int b = 6;
+    bool isFalse = false;
+    bool isTrue = true;
 
-    std::cout<<((a > b) || (a + b) >= 16)<<std::endl;
+
+    std::cout<<isFalse<<std::endl;
+    std::cout<<isTrue<<std::endl;
 
 
     return 0;
