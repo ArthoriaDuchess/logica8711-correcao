@@ -1,33 +1,24 @@
 #include <iostream>
-#include <string>
+#include <cmath>
 
 int main(){
 
-    std::string name;
-    std::string surname;
-    std::string fullName;
-    int age;
-    int yearOfBirth;
-    std::string cityOfResidence;
+    double area, raio;
 
-    std::cout << "Enter your name: ";
-    std::getline(std::cin, name);
+    // M_PI é uma constante definida na biblioteca cmath que representa o valor de pi (aproximadamente 3.14159).
+    std::cout << "Digite o raio do circulo: ";
+    std::cin >> raio;
+    
+    // A função std::pow é usada para calcular a potência de um número. Neste caso, ela é usada para calcular o quadrado do raio (raio elevado a 2).
+    area = M_PI * std::pow(raio, 2);
+    std::cout << "A area do circulo e: " << area << std::endl;
 
-    std::cout << "Enter your surname: ";
-    std::getline(std::cin, surname);
-
-    fullName = name + " " + surname;
-
-    std::cout << "Your full name is: " << fullName << std::endl;
+    // A função std::sqrt é usada para calcular a raiz quadrada de um número.
+    //Neste caso, ela é usada para calcular o raio do círculo a partir da área, usando a fórmula inversa da área do círculo (raio = sqrt(area / pi)).
+    raio = std::sqrt(area / M_PI);
+    std::cout << "O raio do circulo e: " << raio << std::endl;
 
 
-    std::cout<< "insira a sua idade: ";
-    std::cin >> age;
-    std::cout<< "qual o seu ano de nascimento? ";
-    std::cin >> yearOfBirth;
-    std::cout<< "qual a sua cidade de residencia? ";
-    std::getline(std::cin, cityOfResidence);
-    std::cout<< name << " " << surname << ", voce tem " << age - yearOfBirth << ", e esta morando em: " << cityOfResidence << "." << std::endl;
 
     return 0;
 }
