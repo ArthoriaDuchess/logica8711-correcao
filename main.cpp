@@ -3,12 +3,9 @@
 
 int main(){
 
-    std::string nome = "Diego";
+    int diego[5] = {10,20,30,40,50};
     
-    std::cout<<"nome tem:"<<nome.length()<<" caracteres"<<std::endl;
-    std::cout<<"nome tem:"<<nome.size()<<" caracteres"<<std::endl;
-    
-
+    std::cout<<diego[1];
 
     return 0;
 }
