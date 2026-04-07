@@ -3,11 +3,11 @@
 
 int main(){
 
-    int a = 40;
-    std::string d = "10";
-
-    std::cout<<a + d<<std::endl;
-
+    std::string nome = "Diego";
+    
+    std::cout<<"nome tem:"<<nome.length()<<" caracteres"<<std::endl;
+    std::cout<<"nome tem:"<<nome.size()<<" caracteres"<<std::endl;
+    
 
 
     return 0;
