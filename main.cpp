@@ -3,10 +3,16 @@
 
 int main(){
 
-   std::cout<<std::sqrt(64)<<std::endl; //raiz quadrada
-   std::cout<<std::round(2.6)<<std::endl; // arredonda
-   std::cout<<std::log(2)<<std::endl; 
+   int a = 5;
+   int b = 3;
 
+   if(a > b){
+        std::cout<< "A é maior que B."<<std::endl;
+   }
+   else{
+        std::cout<< "B é maior que A."<<std::endl;
 
+   }
+   //if (teste)
     return 0;
 }
