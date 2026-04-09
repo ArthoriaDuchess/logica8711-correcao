@@ -3,16 +3,21 @@
 
 int main(){
 
-   int a = 5;
-   int b = 3;
+    std::string user;
+    std::string senha;
 
-   if(a > b){
-        std::cout<< "A é maior que B."<<std::endl;
-   }
-   else{
-        std::cout<< "B é maior que A."<<std::endl;
+    std::cout<< "Digite seu usuario de acesso. "<<std::endl;
+    std::cin>>user;
 
-   }
-   //if (teste)
+    std::cout<<"digite a sua senha. "<<std::endl;
+    std::cin>>senha;
+
+    if(senha == "dochi1509"){
+        std::cout<< "O usuario "<<user<< " esta logado com sucesso!! "<<std::endl;
+    }
+    else{
+        std::cout<<"Usuario ou senha invalidos!"<<std::endl;
+    }
+
     return 0;
 }
