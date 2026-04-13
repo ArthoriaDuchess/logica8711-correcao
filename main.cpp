@@ -24,8 +24,10 @@ int main(){
     }else if(opcaoPagamento == 2){
         Desconto = ValorTotalParafuso * 0.90;
         std::cout<<"Sua compra ficou no valor total de R$: "<<Desconto<<std::endl;
-    }else{
+    }else if(opcaoPagamento == 3){
         std::cout<<"Sua compra ficou no valor total de R$: "<<ValorTotalParafuso<<std::endl;
+    }else{
+        std::cout<<"Forma de pagamento invalida, tente outra forma!!"<<std::endl;
     }
 
     return 0;
