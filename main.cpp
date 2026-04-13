@@ -1,23 +1,33 @@
 #include <iostream>
-#include <cmath>
 
 int main(){
 
-    std::string user;
-    std::string senha;
+    int idade;
+    
+    std::cout<<" Digite a sua idade: "<<std::endl;
+        std::cin>>idade;
 
-    std::cout<< "Digite seu usuario de acesso. "<<std::endl;
-    std::cin>>user;
+    if(idade < 0){
+        std::cout<<"Idade invalida!"<<std::endl;
 
-    std::cout<<"digite a sua senha. "<<std::endl;
-    std::cin>>senha;
+    }else if(idade <= 2){
+        std::cout<<"Você e um bebe!"<<std::endl;
 
-    if(senha == "dochi1509"){
-        std::cout<< "O usuario "<<user<< " esta logado com sucesso!! "<<std::endl;
-    }
-    else{
-        std::cout<<"Usuario ou senha invalidos!"<<std::endl;
+    }else if(idade <= 12){
+        std::cout<<"Você e uma criança ainda, nao deveria estar aqui!!"<<std::endl;
+
+    }else if(idade <= 14){
+        std::cout<<"Você ainda vai chegar nessa fase!"<<std::endl;
+
+    }else if (idade <= 18){
+        std::cout<<"Você ainda nao esta na maioriedade!"<<std::endl;
+
+    }else if (idade <= 60){
+        std::cout<<"Voce ja e maior de idade!"<<std::endl;   
+    }else{
+        std::cout<<"Voce e um(a) senhor(a)!"<<std::endl;
     }
 
     return 0;
+
 }
