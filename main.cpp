@@ -7,6 +7,7 @@ int main(){
     float ValorParafuso = 1.40;
     float ValorTotalParafuso;
     float Desconto;
+    float ValorComJuros;
 
     std::cout<<"Digite a quantidade de parafusos desejada: "<<std::endl;
     std::cin>>qntParafuso;
@@ -24,10 +25,12 @@ int main(){
     }else if(opcaoPagamento == 2){
         Desconto = ValorTotalParafuso * 0.90;
         std::cout<<"Sua compra ficou no valor total de R$: "<<Desconto<<std::endl;
-    }else if(opcaoPagamento == 3){
-        std::cout<<"Sua compra ficou no valor total de R$: "<<ValorTotalParafuso<<std::endl;
+    }else if (opcaoPagamento == 3){
+        ValorComJuros = ValorTotalParafuso * 1.10;
+        std::cout<<"Sua compra ficou no valor total de R$: "<<ValorComJuros<<std::endl;
     }else{
         std::cout<<"Forma de pagamento invalida, tente outra forma!!"<<std::endl;
+
     }
 
     return 0;
