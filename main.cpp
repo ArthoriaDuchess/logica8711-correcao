@@ -1,35 +1,37 @@
 #include <iostream>
+#include <string>
 
 int main(){
     
-    int opcaoPagamento;
-    int qntParafuso;
-    float ValorParafuso = 1.40;
-    float ValorTotalParafuso;
-    float Desconto;
-    float ValorComJuros;
+    //Nome, Altura, Idade.
+    //<10 = infantil
+    //<18 = adolecente
+    //<60 = adulto
 
-    std::cout<<"Digite a quantidade de parafusos desejada: "<<std::endl;
-    std::cin>>qntParafuso;
+    std::string nome;
+    int idade;
+    float altura;
 
-    ValorTotalParafuso = qntParafuso * ValorParafuso;
+    std::cout<<"Informe o seu nome: "<<std::endl;
+    std::cin>> nome;
 
-    std::cout<<"Qual a forma de pagamento: "<<std::endl;
-    std::cout<<"--- 1 - Pix"<<std::endl;
-    std::cout<<"--- 2 - Dinheiro"<<std::endl;
-    std::cout<<"--- 3 - Cartao"<<std::endl;
-    std::cin>>opcaoPagamento;
+    std::cout<<"Qual a sua idade: "<<std::endl;
+    std::cin>> idade;
 
-    if(opcaoPagamento == 1){
-        std::cout<<"Sua compra ficou no valor total de R$: "<<ValorTotalParafuso<<std::endl;
-    }else if(opcaoPagamento == 2){
-        Desconto = ValorTotalParafuso * 0.90;
-        std::cout<<"Sua compra ficou no valor total de R$: "<<Desconto<<std::endl;
-    }else if (opcaoPagamento == 3){
-        ValorComJuros = ValorTotalParafuso * 1.10;
-        std::cout<<"Sua compra ficou no valor total de R$: "<<ValorComJuros<<std::endl;
+    std::cout<<"Qual e a sua altura: "<<std::endl;
+    std::cin>> altura;
+
+    if (idade <= 10){
+        std::cout<<"Ola "<<nome<<" voce tem "<<idade<<" e a sua altura e "<<altura<<" mas voce ainda esta muito novo para isso! "<<std::endl;
+
+    }else if ( idade <= 18){
+            std::cout<<"Ola "<<nome<<" voce tem "<<idade<<" e a sua altura e "<<altura<<",Voce esta apto para fazer isso! "<<std::endl;
+
+    }else if (idade <= 40){
+        std::cout<<"Ola "<<nome<<" voce tem "<<idade<<" e a sua altura e "<<altura<<" ,acho que isso nao e para voce nesse momento! "<<std::endl;
+
     }else{
-        std::cout<<"Forma de pagamento invalida, tente outra forma!!"<<std::endl;
+        std::cout<<"Ola "<<nome<<" voce tem "<<idade<<" e a sua altura e "<<altura<<" ,talvez voce ja tenha passado desse momento!"<<std::endl;
 
     }
 
