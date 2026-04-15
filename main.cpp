@@ -1,18 +1,12 @@
 #include <iostream>
-#include <thread> //para lidar com o tempo de execucao
-#include <chrono> //para definir unidaddes de tempo (ms, segundo)
-
 
 int main(){
     
-    for(int i = 10; i >= 0; i--){
-        std::cout<<"A bomba ira explodir em.."<<i<<std::endl;
+    int tabuada = 7;
 
-        std::this_thread::sleep_for(std::chrono::seconds(10));
-        //seconds <-> milliseconds.
+    for(int i = 0; i <= 10; i++){
+        std::cout<<"Resultado de "<<tabuada<<" x "<<i<<" = "<<tabuada * i<<std::endl;
     }
-
-        std::cout<<"Que pena a bomba explodiu!!!"<<std::endl;
 
     return 0;
 }
