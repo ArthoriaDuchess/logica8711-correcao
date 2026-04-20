@@ -3,12 +3,12 @@
 
 int main(){
 
+    int numeros[5] = {10, 20, 30 , 40, 50};
+    int tamanho = std::size(numeros);
 
-    std::string nomes[3] = {"João", "Paula", "Murilo"};
-    int idades [3] = {27, 31, 20};
-
-    std::cout<<nomes[1]<<" tem "<<idades[1]<<" anos!"<<std::endl;
-
+    for(int i = 0; i < tamanho; i++){
+        std::cout <<numeros[i] <<std::endl;
+    }
 
     return 0;
 }
