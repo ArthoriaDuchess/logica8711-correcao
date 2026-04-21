@@ -3,15 +3,15 @@
 
 int main(){
 
-    int contagem = 10;
-    
-    while(contagem > 0){
-        std::cout<<contagem<<std::endl;
-        contagem --;
+    int quantidade;
 
+    do{
+
+    std::cout<<"Digite a quantidade em estoque (Deve ser maior que 0): "<<std::endl;
+    std::cin>>quantidade;
     }
-
-    std::cout<<"Feliz ano novo!"<<std::endl;
+    while(quantidade <= 0);
+    std::cout<<"Estoque atualizado: "<<quantidade<< " Unidades."<<std::endl;
 
     return 0;
 }
