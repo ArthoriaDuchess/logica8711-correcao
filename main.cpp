@@ -1,12 +1,14 @@
 #include <iostream>
+#include <vector>
 
 int main(){
 
-    for(int i = 0; i < 10; i++){
-        if(i == 4){
-            break;
-        }
-        std::cout<<i<<std::endl;
+    std::vector<std::string>cars = {"Volvo", "BMW", "Mercedes"};
+    
+    cars.push_back("Mazda");
+
+    for(std::string car : cars){
+        std::cout<<car<<std::endl;
     }
 
     return 0;
