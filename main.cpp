@@ -1,12 +1,14 @@
 #include <iostream>
 
-int myFuncao(int x, int y){
-    return x + y;
+int DoubleGame(int x){
+    return x * 2;
 }
 
 int main(){
 
-    std::cout<<myFuncao(5, 3)<<std::endl;
+    for(int i = 1; i <= 5; i++){
+        std::cout<<"O dobro de "<<i<<" é "<<DoubleGame(i)<<std::endl;
+    }
 
     return 0;
 }
