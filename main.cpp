@@ -1,13 +1,13 @@
 #include <iostream>
 #include <string>
 
-void minhaFuncao (std::string nome, int idade){
-    std::cout<<"Meu nome é "<<nome<<" e tenho "<<idade<<" anos."<<std::endl;
+int myFuncao(int x){
+    return 5 + x;
 }
 
 int main(){
 
-    minhaFuncao("Diego", 23);
+    std::cout<<myFuncao(3)<<std::endl;
 
     return 0;
 }
