@@ -1,12 +1,13 @@
 #include <iostream>
 
-void myFunction(){
-    std::cout<<"Olá mundo!"<<std::endl;
+void minhaFuncao(std::string name){
+    std::cout<<name<<std::endl;
 }
 
 int main(){
 
-    myFunction();
+    minhaFuncao("Diego");
+    minhaFuncao("Nome");
 
     return 0;
 }
