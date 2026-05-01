@@ -3,19 +3,15 @@
 
 int main() {
 
-    int num;
+    int totalSeconds;
 
-    std::cout<<"Enter a number: "<<std::endl;
-    std::cin>>num;
+    std::cout<<"Enter total seconds: "<<std::endl;
+    std::cin>>totalSeconds;
 
-    std::cout<<num%2<<std::endl;
+    int minutes = totalSeconds / 60;
+    int seconds = totalSeconds % 60;
 
-    if(num % 2 == 0){
-        std::cout<<"Este numero é par!"<<std::endl;
-
-    }else{
-        
-        std::cout<<"O valor indicado é impar!"<<std::endl;
-    }
+    std::cout<<"Time: "<<minutes<<" minutes and "<<seconds<<" seconds."<<std::endl;
+    
     return 0;
 }
