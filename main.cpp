@@ -4,10 +4,18 @@
 #include <iomanip>
 
 
-    std::string nomeAluno;
-    std::string nomeResponsavel;
     int cpfAluno;
+    int rgAluno;
+    std::string nomeAluno;
+    std::string emailAluno;
+    std::string contatoAluno;
+    std::string dataNacimento;
+    std::string endereçoAluno;
+    std::string bairroAluno
+
     int cpfResponsavel;
+    std::string nomeResponsavel;
+
 
 void exibirModalidade(){
     std::cout<<"\n=========== SENAC NH - MATRICULAS =========="<<std::endl;
@@ -22,12 +30,10 @@ void exibirModalidade(){
 void cadastroAluno(){
     std::cout<<"Digite o nome completo do Aluno: "<<std::endl;
     std::getline(std::cin, nomeAluno);
-    std::cout<<"Digite o nome completo do Responsavel: "<<std::endl;
-    std::getline(std::cin, nomeResponsavel);
+    
     std::cout<<"Informe o cpf do Aluno: "<<std::endl;
     std::cin>>cpfAluno;
-    std::cout<<"Informe o cpf do Responsavel: "<<std::endl;
-    std::cin>>cpfResponsavel;
+    
 }
 
 
@@ -37,11 +43,11 @@ int main() {
     SetConsoleOutputCP(CP_UTF8); // Poder colocar acentos
     SetConsoleCP(CP_UTF8); // Poder colocar acentos
 
-    int modalidade = -1;
-    std::string nome, sobrenome, cep, cpf
+    // int modalidade = -1;
+    // std::string nome, sobrenome, cep, cpf
 
-    exibirModalidade();
-    modalidade;
+    // exibirModalidade();
+    // modalidade;
 
     
     return 0;
