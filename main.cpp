@@ -13,7 +13,12 @@
         return a * b;
     }
     float dividir (float a, float b){
-        return a / b;
+        if (a == 0){
+            std::cout<<"Nao e possivel dividir por 0"<<std::endl;
+            return 0;
+        }else{
+            return a / b;
+        }
     }
 
 void coletarNumeros (float &a, float &b){
