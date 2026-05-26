@@ -4,20 +4,21 @@
 
 int main(){
 
-    SetConsoleOutputCP(CP_UTF8); // Poder colocar acentos
-    SetConsoleCP(CP_UTF8); // Poder colocar acentos
+    int numero;
+    int contador = 0;
 
-    int numero, sorteado = 42;
-
-    do{
-        std::cout<<"Advinhe: ";
+    while(true){
+        std::cout<<"Digite um numero(0 para parar): ";
         std::cin>>numero;
-        if(numero < sorteado) std::cout<<"Maior!"<<std::endl;
-        else if (numero != sorteado) std::cout<<"Menos!"<<std::endl;
-    }while(numero != sorteado);
 
-    std::cout<<"Acertou!!"<<std::endl;
-    
+        if(numero == 0){
+            break;
+        }
+        contador++;
+    }
+
+    std::cout<<"Voce digitou "<<contador<<" numero!!"<<std::endl;
+
     return 0;
 }
 
