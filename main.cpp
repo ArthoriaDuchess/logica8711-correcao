@@ -2,17 +2,15 @@
 #include <tuple>
 #include <string>
 
-    void contar(int numero){
-        if(numero == 0){
-            std::cout<<"PARE SEU PILANTRA!!\n";
-            return;
-        }
-        std::cout<<numero<<"\n";
-        contar(numero -1);
-    }
-     int main(){
-        
-        contar(5);
+int fibonacci(int n){
+    if(n == 0) return 0;
+    if(n == 1) return 1;
 
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+int main(){
+    std::cout<<fibonacci(6)<<std::endl;
+    
         return 0;
 }
