@@ -2,26 +2,27 @@
 #include <tuple>
 #include <string>
 
-int fibonacci(int n){
-    std::cout<<"Calculando fib("<< n<<")"<<std::endl;
+int contarDigitos(int n){
+    if(n == 0) 
+    return 0;
 
-    if(n == 0){
-        std::cout<<"Fib(0) = 0 (PARADA)"<<std::endl;
-        return 0;
-    }
-    if(n == 1){
-        std::cout<<"Fib(1) = 1 (PARADA)"<<std::endl;
-        return 1;
-    }
-    std::cout<<"Fib("<<n<<") = fib("<<(n-1)<<") + fib("<<(n-2)<<")\n";
-    int resultado = fibonacci(n - 1) + fibonacci(n - 2);
-    std::cout<<"Fib(" << n << ") = "<< resultado << "\n";
-    return resultado;
+    return 1 + contarDigitos(n/10);
 }
 
 int main(){
 
-    fibonacci(4);
+    int numeroUsuario;
+
+    std::cout<<"Digite um numero inteiro: "<<std::endl;
+    std::cin>>numeroUsuario;
+
+    if(numeroUsuario == 0){
+        std::cout<<"O numero 0 tem 1 digito.\n";
+    }else{
+        std::cout<<"O numero "<<numeroUsuario<<" tem "<<contarDigitos(numeroUsuario)<<" digitos.\n";
+    }
+
+    std::cout<<"O numero "<<numeroUsuario<<" tem "<<contarDigitos(numeroUsuario)<<" digitos.\n";
 
         return 0;
 }
