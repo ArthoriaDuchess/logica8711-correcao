@@ -2,27 +2,30 @@
 #include <tuple>
 #include <string>
 
-int contarDigitos(int n){
-    if(n == 0) 
-    return 0;
+void tabuada(int numero, int multiplicador){
+    if(multiplicador == 0){
+        return;
+    }
 
-    return 1 + contarDigitos(n/10);
+    tabuada(numero, multiplicador - 1);
+
+    std::cout<<numero<<" x "<<multiplicador<<" = "<<(numero * multiplicador)<<std::endl;
+
 }
 
 int main(){
 
-    int numeroUsuario;
+   int numero;
+   int multiplicador;
 
-    std::cout<<"Digite um numero inteiro: "<<std::endl;
-    std::cin>>numeroUsuario;
+   std::cout<<"Insira um numero: "<<std::endl;
+   std::cin>>numero;
 
-    if(numeroUsuario == 0){
-        std::cout<<"O numero 0 tem 1 digito.\n";
-    }else{
-        std::cout<<"O numero "<<numeroUsuario<<" tem "<<contarDigitos(numeroUsuario)<<" digitos.\n";
-    }
+   std::cout<<"Insira um multiplicador: "<<std::endl;
+   std::cin>>multiplicador;
 
-    std::cout<<"O numero "<<numeroUsuario<<" tem "<<contarDigitos(numeroUsuario)<<" digitos.\n";
+    tabuada(numero, multiplicador);
+   
 
         return 0;
 }
