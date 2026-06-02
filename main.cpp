@@ -1,20 +1,36 @@
 #include <iostream>
 #include <tuple>
 #include <string>
+#include <cctype>
 
-int somarVetor(int vetor[], int indice){
-    if(indice == 0){
-        return vetor[0];
+bool ehPalindromo(std::string s){
+    int inicio = 0;
+    int fim = s.length() - 1;
+
+    while(inicio < fim){
+        if(s[inicio] != s [fim] ){
+            return false;
+        }
+        inicio++;
+        fim--;
     }
-
-    return vetor[indice] + somarVetor(vetor, indice - 1);
+    return true;
 }
 
 int main(){
+    std::string PalindromoDoido;
 
-   int numeros[5] = {10, 20, 30, 40, 50};
+    std::cout<<"Insira o palindromo: "<<std::endl;
+    std::cin>>PalindromoDoido;
 
-   std::cout<<"Soma recursiva: "<<somarVetor(numeros, 4)<<std::endl;
+    for(int i = 0; i < PalindromoDoido.length(); i++){
+        PalindromoDoido[i] = std::tolower(PalindromoDoido[i]);
+    }
+    if(ehPalindromo(PalindromoDoido)){
+        std::cout<<"É palindromo!"<<std::endl;
+    }else{
+        std::cout<<"Não é palíndromo!"<<std::endl;
+    }
 
-        return 0;
+    return 0;
 }
