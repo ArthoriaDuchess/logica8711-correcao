@@ -1,25 +1,32 @@
 #include <iostream>
-#include <tuple>
 #include <string>
-#include <cctype>
 
-struct Pessoa{
+struct Aluno{
     std::string nome;
-    int idade;
-    float altura;
+    float nota1;
+    float nota2;
 };
 
-int main(){
+float calcularMedia(Aluno a){
+    return (a.nota1 + a.nota2) / 2;
+}
 
-    Pessoa p1;
+int main (){
+
+     Aluno aluno;
+
+    float media = calcularMedia(aluno);
+
+    std::cout<<"Informe o seu nome: ";
+    std::getline(std::cin, aluno.nome);
     
-    p1.nome = "Diego dos Santos";
-    p1.idade = 22;
-    p1.altura = 1.79;
+    std::cout<<"Informe a sua primeira nota: ";
+    std::cin>>aluno.nota1;
 
-    std::cout<<"Nome: "<<p1.nome<<std::endl;
-    std::cout<<"Idade: "<<p1.idade<<std::endl;
-    std::cout<<"Altura: "<<p1.altura<<std::endl;
+    std::cout<<"Informe a sua segunda nota: ";
+    std::cin>>aluno.nota2;
+
+    std::cout<<aluno.nome<<" Sua média é: "<<calcularMedia<<std::endl;
 
     return 0;
-}           
+}        
