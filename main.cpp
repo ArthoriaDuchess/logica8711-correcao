@@ -1,25 +1,37 @@
 #include <iostream>
-#include <string>
-
-void torreDeHanoi(int n, std::string origem, std::string destino, std::string auxiliar){
-    if(n == 1){
-        std::cout<<"Mover disco "<<origem<<" para "<<destino<<std::endl;
-        return;
+ 
+ 
+void quickSort(int* arr, int esquerda, int direita){
+    if(esquerda >= direita) return ;
+ 
+    int pivo = arr[direita];
+    int i = esquerda - 1;
+ 
+    for(int j = esquerda; j < direita; j++){
+        if(arr[j] < pivo){
+            i++;
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
     }
-    torreDeHanoi(n - 1, origem, auxiliar, destino);
-    std::cout<<"Mover disco "<<n<<" de "<<origem<<" para "<<destino<<std::endl;
-    torreDeHanoi(n - 1, auxiliar, destino, origem);
+    int temp = arr[i + 1];
+    arr[i + 1 ] = arr[direita];
+    arr[direita] = temp;
+ 
+    quickSort(arr, esquerda, i);
+    quickSort(arr, i + 2, direita);
 }
-
+ 
 int main(){
-
-    int numDiscos;
-    std::cout<<"Quantos discos: ";
-    std::cin>>numDiscos;
-
-    std::cout<<"\nSequencia de movimentos: "<<std::endl;
-    torreDeHanoi(numDiscos, "A", "C", "B");
-
-    std::cout<<"\nTotal de movimentos: "<<(1 << numDiscos) - 1<<std::endl;
+    int arr [] = {64, 34, 25, 12, 22, 11, 90};
+    int tamanho = 7;
+ 
+    quickSort(arr, 0, tamanho - 1);
+ 
+    for(int i = 0; i < tamanho; i++){
+        std::cout<<arr[i]<<" ";
+    }
     return 0;
+ 
 }
