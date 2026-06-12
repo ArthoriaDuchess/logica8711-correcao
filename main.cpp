@@ -1,14 +1,18 @@
 #include <iostream>
  
- int mdc(int a, int b){
-    if(b == 0) return 0;
-    return mdc(b, a % b);
- }
 
- int main(){
-    std::cout<<"MDC(48, 18) = "<<mdc(48, 18)<<std::endl;
-    std::cout<<"MDC(100, 50) = "<<mdc(100, 50)<<std::endl;
+int encontrarMaior(int* arr, int tamanho){
+   int maior = arr[0];
+   for(int i = 1; i < tamanho; i++){
+      if(arr[i] > maior){
+         maior = arr[i];
+      }
+   }
+   return maior;
+}
 
-    return 0;
- }
-
+int main(){
+   int arr[] = {3, 7, 2, 9, 1, 5};
+   std::cout<<"Maior elemento: "<<encontrarMaior(arr, 6)<<std::endl;
+   return 0;
+}
