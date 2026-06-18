@@ -1,28 +1,30 @@
 #include <iostream>
 #include <string>
 
-struct Jogador{
-   std::string nome;
-   int CartaoVermelho;
-   int CartaoAmarelo;
-};
-
 int main(){
-   std::cout<<"===== REGISTRO DE CARTÕES ====="<<std::endl;
-   std::cout<<std::endl;
-
-   Jogador jogador;
-
-   std::cout<<"Nome do jogador: ";
-   std::cin>>jogador.nome;
-
-   std::cout<<"Cartões amarelos: "<<std::endl;
-   std::cin>>jogador.CartaoAmarelo;
-
-   std::cout<<"Cartões vermelhos: "<<std::endl;
-   std::cin>>jogador.CartaoVermelho;
-
-   std::cout<<std::endl;
-   std::cout<<"===== SITUAÇÃO ====="<<std::endl;
    
+   int  jogos;
+
+   std::cout<<"===== Calculador de publico ====="<<std::endl;
+   std::cout<<std::endl;
+
+   std::cout<<"Quantos jogos ?";
+   std::cin>>jogos;
+
+   int somaPublico = 0;
+
+   for(int i = 1; i <= jogos; i++){
+      int publico;
+      std::cout<<"Público jogo "<<i<<": ";
+      std::cin>>publico;
+      somaPublico += publico;
+   }
+   int media = somaPublico / jogos;
+
+   std::cout<<std::endl;
+   std::cout<<"====== RESULTADO ======"<<std::endl;
+   std::cout<<"Média de público: "<<media<<" pessoas"<<std::endl;
+   std::cout<<"Total de público: "<<somaPublico<<" pessoas"<<std::endl;
+   
+ return 0;
 }
