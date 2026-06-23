@@ -1,33 +1,59 @@
 #include <iostream>
 #include <string>
 
-struct Convocados{
-   std::string nome;
-   int numero;
-   std::string posicao;
-
-};
-
 int main(){
-   Convocados convocados[3];
+   
+   int pilha[10];
+   int topo = -1;
+   int opcao;
 
-   std::cout<<"==== CONVOCAÇÃO DA SELEÇÃO ===="<<std::endl;
-   std::cout<<std::endl;
+   std::cout<<"===== PILHA COM MENU ====="<<std::endl;
 
-   for(int i = 0; i < 3; i++){
-      std::cout<<"Jogador "<<(i + 1)<<": "<<std::endl;
-      std::cout<<"Nome: ";
-      std::cin>>convocados[i].nome;
-      std::cout<<"Número: ";
-      std::cin>>convocados[i].numero;
-      std::cout<<"Posição: ";
-      std::cin>>convocados[i].posicao;
-   }
-   std::cout<<"====== LISTA DE CONVOCADOS ======="<<std::endl;
-   std::cout<<std::endl;
+   while(true){
+      std::cout<<"1. Empilhar"<<std::endl;
+      std::cout<<"2. Desempilhar"<<std::endl;
+      std::cout<<"3. Exibir pilha"<<std::endl;
+      std::cout<<"4. Sair"<<std::endl;
+      std::cout<<"Esolha: "<<std::endl;
+      std::cin>>opcao;
 
-   for(int i = 0; i < 3; i++){
-      std::cout<<convocados[i].numero<<" - "<<convocados[i].nome<<" ("<<convocados[i].posicao<<")"<<std::endl;
+      if(opcao == 1){
+         if(topo < 9){
+            int valor;
+            std::cout<<"Digite o valor: ";
+            std::cin>>valor;
+            topo++;
+            pilha[topo];
+            std::cout<<"Empilhado"<<std::endl;
+         }else{
+            std::cout<<"Pilha cheia!"<<std::endl;
+
+         }
+      }
+      else if(opcao == 2){
+         if(topo >= 0){
+            std::cout<<"Removido: "<<pilha[topo]<<std::endl;
+            topo--;
+         }else{
+            std::cout<<"Pilha vazia!"<<std::endl;
+
+         }
+      }
+      else if(opcao == 3){
+         if(topo >= 0){
+            std::cout<<"Pilha: "<<std::endl;
+            for(int i = 0; i <= topo; i++){
+               std::cout<<pilha[i]<<" ";
+            }
+            std::cout<<std::endl;
+         }else{
+            std::cout<<"Pilha vazia!"<<std::endl;
+         }
+      }
+      else if(opcao ==  4){
+         std::cout<<"Saindo. . ."<<std::endl;
+         break;
+      }
    }
    return 0;
 }
