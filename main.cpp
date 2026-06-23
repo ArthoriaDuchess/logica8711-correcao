@@ -20,7 +20,7 @@ int main(){
       std::cin>>convocados[i].nome;
       std::cout<<"Número: ";
       std::cin>>convocados[i].numero;
-      std::cout>>"Posição: ";
+      std::cout<<"Posição: ";
       std::cin>>convocados[i].posicao;
    }
    std::cout<<"====== LISTA DE CONVOCADOS ======="<<std::endl;
