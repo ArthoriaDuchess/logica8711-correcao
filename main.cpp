@@ -1,30 +1,31 @@
 #include <iostream>
+#include <vector>
 
+int main(){
 
-// int main(){
-//    1. Ler e exibir Crie um programa que leia 5 números e exiba-os na tela.
-//    int numeros[] = {10, 20, 30, 40, 50};
+    std::vector<int>numeros;
 
-//    for(int i =0; i < 5; i++){
-//       std::cout<<numeros[i]<<std::endl;
-// }
+    std::cout<<"===== VECTOR (Arraylist em C++) ====="<<std::endl;
 
-//    std::cout<<"Esses são os numeros: "<<std::endl;
-//    return 0;
-// }
+    numeros.push_back(10);
+    numeros.push_back(20);
+    numeros.push_back(30);
 
+    std::cout<<"Numeros: ";
+    for(int i = 0; i < numeros.size(); i++){
+        std::cout<<numeros[i]<<" ";
+    }
+    std::cout<<std::endl;
 
+    std::cout<<"Tamanho: "<<numeros.size()<<std::endl;
 
-// int main(){
+    numeros.pop_back();
 
-//    2. Soma simples Leia 5 números e calcule a soma total.
-//    int numeros[] = {10, 20, 30, 40, 50};
-//    int soma;
+    std::cout<<"Após remover o último: ";
+    for(int i = 0; i < numeros.size(); i++){
+        std::cout<<numeros[i]<<" ";
+    }
 
-//    for(int i = 0; i < 5; i++){
-//       soma += numeros[i];
-//    }
-//    std::cout<<"O valor deu: "<<soma<<std::endl;
-
-//    return 0;
-// }
+    
+    return 0;
+}
