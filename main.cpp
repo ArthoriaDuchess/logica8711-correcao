@@ -1,42 +1,30 @@
 #include <iostream>
-#include <string>
-
-int main(){
-
-   int matriz [3][4] = {
-      {10,25,5,40},
-      {15,8,30,12},
-      {20,3,18,35}
-   };
-
-   int maior = matriz [0][0];
-   int menor = matriz [0][0];
-   int linhaM = 0, colunaM = 0;
-   int linhaN = 0, colunaN = 0;
-
-   std::cout<<"===== Min e Max em matriz ====="<<std::endl;
-
-   std::cout<<"Matriz: "<<std::endl;
-   for(int i = 0; i < 3; i++){
-      for(int j = 0; j < 4; j++){
-         std::cout<<matriz[i][j]<<" ";
-
-         if(matriz[i][j] > maior){
-            maior = matriz[i][j];
-            linhaM = i;
-            colunaM = j;
-         }
-         if(matriz[i][j] < menor){
-            menor = matriz[i][j];
-            linhaN = i;
-            colunaN = j;
-         }
-      }
-   }
-   std::cout<<std::endl;
-   std::cout<<"Maior: "<<maior<<" na posição ["<<linhaM<<"]["<<colunaM<<"]"<<std::endl;
-   std::cout<<"Menor: "<<menor<<" na posição ["<<linhaN<<"]["<<colunaN<<"]"<<std::endl;
 
 
-   return 0;
-}
+// int main(){
+//    1. Ler e exibir Crie um programa que leia 5 números e exiba-os na tela.
+//    int numeros[] = {10, 20, 30, 40, 50};
+
+//    for(int i =0; i < 5; i++){
+//       std::cout<<numeros[i]<<std::endl;
+// }
+
+//    std::cout<<"Esses são os numeros: "<<std::endl;
+//    return 0;
+// }
+
+
+
+// int main(){
+
+//    2. Soma simples Leia 5 números e calcule a soma total.
+//    int numeros[] = {10, 20, 30, 40, 50};
+//    int soma;
+
+//    for(int i = 0; i < 5; i++){
+//       soma += numeros[i];
+//    }
+//    std::cout<<"O valor deu: "<<soma<<std::endl;
+
+//    return 0;
+// }
