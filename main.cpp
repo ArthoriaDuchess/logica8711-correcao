@@ -1,42 +1,37 @@
 #include <iostream>
-#include <vector>
+#include <string>
+
 
 int main(){
 
-    std::vector<int>numeros;
+    int opcao;
 
-    std::cout<<" "<<std::endl;
+    while(true){
 
-    numeros.push_back(5);
-    numeros.push_back(10);
-    numeros.push_back(15);
-    numeros.push_back(20);
-    numeros.push_back(25);
+    std::cout<<"====== MINI MENUZINHO ======"<<std::endl;
+    std::cout<<"1 - Iniciar o sistema."<<std::endl;
+    std::cout<<"2 - Configuracoes."<<std::endl;
+    std::cout<<"3 - Sair."<<std::endl;
+    std::cout<<"Digite a opção: "<<std::endl;
+    std::cin>>opcao;
 
-
-    std::cout<<"Vector: ";
-    for(int i = 0; i < numeros.size(); i++ ){
-        std::cout<<numeros[i]<<" ";
+    if(opcao == 3){
+        std::cout<<"Finalizando o processo. . ."<<std::endl;
+        break;
     }
 
-    std::cout<<std::endl;
-    
-    std::cout<<"Pares: ";
-    for(int i = 0; i < numeros.size(); i++){
-        if(numeros[i] % 2 == 0){
-            std::cout<<numeros[i]<<" ";
+    switch(opcao){
+        case 1:
+            std::cout<<"Iniciando o sistema."<<std::endl;
+            break;
+        
+        case 2:
+            std::cout<<"Configurações."<<std::endl;
+            break;
+
+        default:
+            std::cout<<"Opção invalida tente novamente. . .\n"<<std::endl;
         }
     }
-
-    std::cout<<std::endl;
-
-    std::cout<<"Impares: ";
-    for(int i = 0; i < numeros.size(); i++){
-       if(numeros[i] % 2 != 0){
-            std::cout<<numeros[i]<<" ";
-       }
-    }
-    
-
     return 0;
 }
