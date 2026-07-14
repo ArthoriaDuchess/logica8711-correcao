@@ -1,37 +1,24 @@
 #include <iostream>
 #include <string>
 
+int dobro(int num){
+    return num * 2;
+}
+int triplo(int num){
+    return num * 3;
+}
+
 
 int main(){
 
-    int opcao;
+    int zoio;
 
-    while(true){
+    std::cout<<"Vamos dobrar os seus zoios: "<<std::endl;
+    std::cin>>zoio;
+    std::cout<<"Você tem: "<<dobro(zoio)<<" zoios"<<std::endl;
 
-    std::cout<<"====== MINI MENUZINHO ======"<<std::endl;
-    std::cout<<"1 - Iniciar o sistema."<<std::endl;
-    std::cout<<"2 - Configuracoes."<<std::endl;
-    std::cout<<"3 - Sair."<<std::endl;
-    std::cout<<"Digite a opção: "<<std::endl;
-    std::cin>>opcao;
+    std::cout<<"Vamos triplicar os seus zoios: "<<std::endl;
+    std::cin>>zoio;
+    std::cout<<"Você tem: "<<triplo(zoio)<<" zoios"<<std::endl;
 
-    if(opcao == 3){
-        std::cout<<"Finalizando o processo. . ."<<std::endl;
-        break;
-    }
-
-    switch(opcao){
-        case 1:
-            std::cout<<"Iniciando o sistema."<<std::endl;
-            break;
-        
-        case 2:
-            std::cout<<"Configurações."<<std::endl;
-            break;
-
-        default:
-            std::cout<<"Opção invalida tente novamente. . .\n"<<std::endl;
-        }
-    }
-    return 0;
 }
