@@ -1,24 +1,16 @@
 #include <iostream>
 #include <string>
-
-int dobro(int num){
-    return num * 2;
-}
-int triplo(int num){
-    return num * 3;
-}
+#include <cmath>
 
 
 int main(){
 
-    int zoio;
+    std::cout<<"Numeros pares: "<<std::endl;
 
-    std::cout<<"Vamos dobrar os seus zoios: "<<std::endl;
-    std::cin>>zoio;
-    std::cout<<"Você tem: "<<dobro(zoio)<<" zoios"<<std::endl;
-
-    std::cout<<"Vamos triplicar os seus zoios: "<<std::endl;
-    std::cin>>zoio;
-    std::cout<<"Você tem: "<<triplo(zoio)<<" zoios"<<std::endl;
+    for(int i = 2; i <= 100; i+=2){
+        std::cout<<i<<std::endl;
+    }
+    
+    return 0;
 
 }
